@@ -8,7 +8,6 @@ const logos = [
   { src: '/javascript-logo.svg', width: 48, height: 48, name:'JavaScript' },
   { src: '/node-logo.svg', width: 48, height: 48, name:'Node' },
   { src: '/react-logo.svg', width: 48, height: 48, name:'React' },
-  { src: '/ruby-logo.svg', width: 48, height: 48, name:'Ruby' },
   { src: '/tailwind-logo.svg', width: 48, height: 48, name:'Tailwind' },
   { src: '/mysql.svg', width: 48, height: 48, name:'MySQL' },
   { src: '/git.svg', width: 48, height: 48, name:'Git' },
