@@ -8,33 +8,16 @@ html, body {
   color: #f3f4f5;
 }
 
-@layer utilities {
-   @keyframes blink {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
 
-  .animate-blink {
-    animation: loading 0.8s step-end infinite;
-  }
-
-  @keyframes loading {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(250%);
-    }
-  }
-
-  .animate-loading-bar {
-    animation: loading 0.8s ease infinite;
-  }
+  @keyframes loading-bar {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(250%); }
 }
+
+.animate-loading-bar {
+  animation: loading-bar 1.4s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+
 
 .reveal {
   opacity: 0;

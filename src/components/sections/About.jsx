@@ -1,20 +1,28 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { LogoTicker } from "../LogoTicker";
+
 
 export const About = () => {
     const frontendSkills = ["React", "TypeScript", "TailwindCSS", "HTML", "CSS"]
     const backendSkills = ["Node.js", "Python", "Java", "C", "JavaScript"]
     return (
+        
         <section 
         id="about" 
-        className="min-h-screen flex items-center justify-center py-20 bg-[#75A9C5]"
-        > 
+        className="min-h-screen flex items-center justify-center py-20 bg-[#c9d9f4]"
+        >   
             <RevealOnScroll>
+                <div className="flex justify-center mb-8 ">
+                    <div className="w-[1000px] sm:w-[1400px] overflow-hidden">
+                        <LogoTicker />
+                    </div>
+                </div>
             <div className="max-w-3xl mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+                <h2 className="text-4xl font-extrabold text-blue-900 mb-8">
                     About Me
                 </h2>
                 <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all ">
-                    <p className="text-grat-300 mb-6">
+                    <p className="text-gray-900 text-lg mb-10">
                         Passionate developer with a strong ambition for fintech and AI.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 hap-6">
@@ -43,7 +51,7 @@ export const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4"> 🎓 Education </h3>
-                        <ul className="list-disc list-inside text-gray-300 space-y-2">
+                        <ul className="list-disc list-inside text-gray-900 space-y-2">
                             <li>
                                 <strong>
                                     Studying Bachelor of Computing Science (Honours) - University of Technology Sydney
@@ -56,7 +64,7 @@ export const About = () => {
                     </div>
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
                         <h3 className="text-xl font-bold mb-4"> 💼 Work Experience </h3>
-                        <div className="space-y-4 text-gray-300">
+                        <div className="space-y-4 text-gray-900">
                             <div> 
                                 <h4 className="font-semibold"> Pending Internship at ... </h4>
                                 <p>
@@ -73,7 +81,7 @@ export const About = () => {
                     </div>
                     <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all md:col-span-2">
                         <h3 className="text-xl font-bold mb-4 text-center"> 🏋️‍♂️ Hobbies </h3>
-                            <ul className="list-disc list-inside text-gray-300 space-y-2">
+                            <ul className="list-disc list-inside text-gray-900 space-y-2">
                                 <li>Going to the gym</li>
                                 <li>Playing weekend Basketball with friends</li>
                                 <li>Going on random hikes and runs</li>
