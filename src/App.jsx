@@ -15,7 +15,7 @@ function App() {
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       {isLoaded && (
-        <div className="min-h-screen bg-black text-gray-100">
+        <div className="min-h-screen bg-white">
           <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
           <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
           <Home />
