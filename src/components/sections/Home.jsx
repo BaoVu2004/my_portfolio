@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SiGithub } from "react-icons/si";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import Spline from "@splinetool/react-spline";
 
 const words = ["Aspiring Developer.", "Athletic Aficionado.", "Hopeful Procrastinator."];
@@ -50,11 +50,14 @@ export const Home = () => {
           <a href="https://github.com/BaoVu2004" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-3xl transition-colors">
             <SiGithub />
           </a>
+          <a href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-3xl transition-colors">
+            <FaLinkedin />
+          </a>
           <a href="https://instagram.com/_baovu" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-3xl transition-colors">
             <FaInstagram />
           </a>
-          <a href="https://www.linkedin.com/in/yourusername/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-3xl transition-colors">
-            <FaLinkedin />
+          <a href="https://facebook.com/_baovu" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 text-3xl transition-colors">
+            <FaFacebook />
           </a>
         </div>
 
@@ -78,6 +81,16 @@ export const Home = () => {
           </a>
         </motion.div>
       </div>
+      <motion.a
+      href="#about"
+      initial={{ y: 0, opacity: 0.7 }}
+      animate={{ y: [0, 16, 0], opacity: 1 }}
+      transition={{ repeat: Infinity, duration: 1.6, ease: "easeInOut" }}
+      className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-4xl cursor-pointer z-20"
+      aria-label="Scroll down"
+    >
+      <span className="drop-shadow-lg animate-pulse">&#8595;</span>
+    </motion.a>
     </section>
   );
 };

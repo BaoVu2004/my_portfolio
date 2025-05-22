@@ -23,7 +23,7 @@ export const LogoTicker = () => {
   return (
     <div className="py-8 md:py-12 mt-8 bg-[#82A7BE]/20] backdrop-blur-sm rounded-lg">
       <div className="overflow-hidden">
-        <div className="flex text-gray-200 [mask-image:linear-gradient(to_right,transparent,black,black,transparent)]">
+        <div className="flex text-grey-900 [mask-image:linear-gradient(to_right,transparent,black,black,transparent)]">
           <motion.div
             className="flex gap-14 md:gap-20 flex-none pr-14"
             animate={shouldAnimate ? { translateX: "-50%" } : { translateX: "0%" }}

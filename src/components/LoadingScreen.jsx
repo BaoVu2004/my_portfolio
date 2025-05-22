@@ -18,7 +18,7 @@ export const LoadingScreen = ({ onComplete }) => {
     }, [onComplete]);
 
     return (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b from-[#82A7BE] to-[#e0ecf4]">
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-gradient-to-b from-[#6885b6] to-[#c9d9f4]">
             <div className="mb-6 text-2xl md:text-3xl font-semibold text-white tracking-wide drop-shadow-lg">
                 Loading...
             </div>
