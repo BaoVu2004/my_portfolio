@@ -68,7 +68,7 @@ export const Home = () => {
 
           <div className="flex space-x-6 mb-8">
             <a
-              href="https://github.com/BaoVu2004"
+              href="https://github.com/baovu-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 text-3xl transition-colors"
@@ -76,7 +76,7 @@ export const Home = () => {
               <SiGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/yourusername/"
+              href="https://www.linkedin.com/in/baovutech/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 text-3xl transition-colors"
@@ -124,7 +124,7 @@ export const Home = () => {
               Contact Me
             </a>
           </motion.div>
-          <span className="absolute bottom-8 left-8 text-xs md:text-sm text-white/80 font-mono tracking-wide z-20">
+          <span className="absolute bottom-8 left-8 font-bold text-md md:text-xl text-white font-mono tracking-wide z-20">
             Based in Sydney, Australia
           </span> 
         </motion.div>

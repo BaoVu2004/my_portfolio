@@ -56,8 +56,8 @@ export const About = () => {
                 how AI and fintech can make the world a little smarter (and my projects a little cooler).
               </p>
               <p className="text-[20px] text-gray-900 text-lg leading-relaxed mb-4">
-                My goal? To design clean, scalable solutions that blend technical depth with real-world value — ideally with some slick UI along 
-                the way. Whether it's machine learning, system design, or creative problem-solving, I’m here for it.
+                My goal? To design clean, scalable solutions that blend technical depth with real-world value especially in the field of sportstech and fintech. 
+                Whether it's machine learning, system design, or creative problem-solving, I’m here for it.
               </p>
               <p className="text-[20px] text-gray-900 text-lg leading-relaxed mb-4">
                 When I’m not shipping code or debugging life, you’ll probably catch me at the gym trying to outlift yesterday’s self, or out 
@@ -80,41 +80,6 @@ export const About = () => {
           </div>
         </motion.div>
       </RevealOnScroll>
-
-      {/* Education Section - full width */}
-      <section className="w-full bg-[#223A5E] py-16">
-        <h2 className="text-4xl font-serif font-bold text-center text-white mb-10">Education</h2>
-        <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto px-4">
-          {/* Card 1 */}
-          <div className="flex-1 bg-white/10 rounded-2xl shadow-lg flex flex-col items-center p-8">
-            <div className="bg-blue-100 rounded-full p-4 mb-4">
-              {/* Example: Compass Icon */}
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                <path d="M16 8l-4 8-4-4 8-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" fill="none"/>
-              </svg>
-            </div>
-            <div className="text-xl font-bold text-center text-white mb-2">University of Technology Sydney</div>
-            <div className="text-blue-100 text-center mb-4">Bachelor of Computing Science (Honours)</div>
-            <div className="w-full h-px bg-blue-200 my-2"></div>
-            <div className="text-blue-200 font-semibold text-sm mt-2">Internship</div>
-          </div>
-          {/* Card 2 */}
-          <div className="flex-1 bg-white/10 rounded-2xl shadow-lg flex flex-col items-center p-8">
-            <div className="bg-blue-100 rounded-full p-4 mb-4">
-              {/* Example: Museum Icon */}
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <rect x="6" y="10" width="12" height="8" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
-                <path d="M6 10V8a6 6 0 0112 0v2" stroke="currentColor" strokeWidth="2" fill="none"/>
-              </svg>
-            </div>
-            <div className="text-xl font-bold text-center text-white mb-2">The Inaro Museum of Contemporary Art</div>
-            <div className="text-blue-100 text-center mb-4">Diploma in Design</div>
-            <div className="w-full h-px bg-blue-200 my-2"></div>
-            <div className="text-blue-200 font-semibold text-sm mt-2">Internship</div>
-          </div>
-        </div>
-      </section>
     </section>
   );
 };

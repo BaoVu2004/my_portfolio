@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 export const Projects = () => {
   const projects = [
     {
-      title: "Novaspace",
+      title: "AI Chatbox???",
       img: "/testingimg.jpg",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni eveniet at voluptatibus ea et blanditiis, harum temporibus voluptas fuga dolore alias laudantium eligendi nihil.",
+      desc: "Work in Progress...",
     },
     {
-      title: "Novaship",
+      title: "Untitles Project",
       img: "/testingimg.jpg",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni eveniet at voluptatibus ea et blanditiis, harum temporibus voluptas fuga dolore alias laudantium eligendi nihil.",
+      desc: "Work in Progress...",
     },
     {
-      title: "Novascentauri",
+      title: "Untitled Project",
       img: "/testingimg.jpg",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus magni eveniet at voluptatibus ea et blanditiis, harum temporibus voluptas fuga dolore alias laudantium eligendi nihil.",
+      desc: "Work in Progress...",
     },
   ];
 
@@ -27,8 +27,10 @@ export const Projects = () => {
   };
 
   return (
-    <section id="projects" className="w-full bg-[#223A5E] py-20 px-4 flex flex-col items-center">
-      <div className="max-w-6xl w-full mx-auto">
+    <>
+      <div className="w-full shadow-inner h-[1px] w-full bg-[#e5e7eb]" />
+      <section id="projects" className="w-full min-h-screen bg-[#f3f4f6] py-20 px-4 flex flex-col items-center">
+        <div className="w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 w-full">
           {/* Left: Button */}
@@ -37,7 +39,7 @@ export const Projects = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="flex items-center gap-2 px-6 py-2 bg-white text-blue-900 font-semibold rounded-lg shadow hover:bg-blue-100 transition mt-8 md:mt-0 order-2 md:order-1"
+            className="flex items-center gap-2 px-6 py-2 bg-blue-200 text-blue-900 font-semibold rounded-lg shadow hover:bg-blue-100 transition mt-8 md:mt-0 order-2 md:order-1"
           >
             <span>See All Projects</span>
             {/* Arrow Icon */}
@@ -54,15 +56,15 @@ export const Projects = () => {
               transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
               className="flex items-center gap-4 justify-end"
             >
-              <hr className="border-blue-300 w-27" />
-              <span className="text-4xl font-small text-white">Recent</span>
+              <hr className="border-blue-500 w-27" />
+              <span className="text-4xl font-small text-blue-500">Recent</span>
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-              className="text-5xl font-extrabold text-white tracking-wider mt-2"
+              className="text-5xl font-extrabold text-blue-500 tracking-wider mt-2"
             >
               PROJECTS
             </motion.h1>
@@ -79,7 +81,7 @@ export const Projects = () => {
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="relative group rounded-3xl overflow-hidden shadow-lg h-[400px] flex items-center justify-center bg-white/10 cursor-pointer transition-transform duration-300 hover:scale-105"
+              className="relative group overflow-hidden shadow-lg h-[1000px] flex items-center justify-center bg-white/10 cursor-pointer transition-transform duration-300 hover:scale-105 rounded-4xl"
             >
               <img
                 src={project.img}
@@ -94,6 +96,7 @@ export const Projects = () => {
           ))}
         </motion.div>
       </div>
-    </section>
+      </section>
+    </>
   );
 };
