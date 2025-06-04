@@ -123,7 +123,10 @@ export const Home = () => {
             >
               Contact Me
             </a>
-          </motion.div> 
+          </motion.div>
+          <span className="absolute bottom-8 left-8 text-xs md:text-sm text-white/80 font-mono tracking-wide z-20">
+            Based in Sydney, Australia
+          </span> 
         </motion.div>
 
       </div>
@@ -131,16 +134,19 @@ export const Home = () => {
       <motion.a
         href="#about"
         initial={{ y: 0, opacity: 0.7 }}
-        animate={{ y: [0, 16, 0], opacity: 1 }}
+        animate={{ y: [0, 24, 0], opacity: 1 }}
         transition={{
           repeat: Infinity,
           duration: 1.6,
           ease: "easeInOut"
         }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-4xl cursor-pointer z-20"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-9xl cursor-pointer z-20"
         aria-label="Scroll down"
       >
-        <span className="drop-shadow-lg animate-pulse">&#8595;</span>
+        <svg width="100" height="50" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" className="mx-auto animate-pulse drop-shadow-lg">
+          <circle cx="18" cy="18" r="16" strokeOpacity="0.5"/>
+          <path d="M12 18l6 6 6-6" />
+        </svg>
       </motion.a>
     </section>
   );

@@ -9,7 +9,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen py-20 flex justify-center items-center bg-[#c9d9f4]"
+      className="min-h-screen py-20 flex flex-col items-center bg-gradient-to-b from-[#c9d9f4] to-white"
     >
       <RevealOnScroll>
         {/* Logo Ticker */}
@@ -23,8 +23,8 @@ export const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
-          className="w-full max-w-full mx-auto py-10 flex flex-col items-center p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-white/20 shadow-lg">
-
+          className="w-full max-w-full mx-auto py-10 flex flex-col items-center p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-white/20"
+        >
           {/* Photo and text side by side */}
           <div className="flex flex-col md:flex-row items-start justify-left mb-10 gap-12 w-full pl-30">
             {/* Photo */}
@@ -37,12 +37,12 @@ export const About = () => {
             </div>
             {/* Text */}
             <div className="flex-1 max-w-1xl text-center md:text-left justify-right pl-20 pr-50">
-              {/* Heading moved here */}
-                <div className="mb-8">
-                  <h2 className="text-5xl font-extrabold text-[#1f3b73] mb-2">
-                    ABOUT ME
-                  </h2>
-                <div className="w-70 h-1 bg-blue-900 rounded-full" />
+              {/* Heading */}
+              <div className="mb-8 flex items-center gap-30">
+                <h2 className="text-5xl font-extrabold text-[#1f3b73]">
+                  ABOUT ME
+                </h2>
+                <div className="w-100 h-1 bg-blue-900 rounded-full flex-1" />
               </div>
               <h3 className="text-2xl font-bold text-slate-800 mb-4">
                 Hello <span className="wave-hand">👋</span>, my name is
@@ -78,81 +78,43 @@ export const About = () => {
               <div className="my-10 w-full h-6 bg-gradient-to-b from-transparent via-blue-200/30 to-transparent rounded-full" />
             </div>
           </div>
-
-          {/* Skills Section */}
-          <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1 transition-all w-full bg-white/70">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4 text-center text-[#2c4470]">Frontend</h3>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {frontendSkills.map((skills) => (
-                    <span
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,224,0.2)] transition"
-                      key={skills}
-                    >
-                      {skills}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
-                <h3 className="text-xl font-bold mb-4 text-center text-[#2c4470]">Backend</h3>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {backendSkills.map((skills) => (
-                    <span
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,224,0.2)] transition"
-                      key={skills}
-                    >
-                      {skills}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Education & Work Experience */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 w-full">
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all bg-white/70">
-              <h3 className="text-xl font-bold mb-4 text-center text-[#2c4470]">🎓 Education</h3>
-              <ul className="list-disc list-inside text-gray-900 space-y-2 text-center">
-                <li>
-                  <strong>
-                    Studying Bachelor of Computing Science (Honours) - University of Technology Sydney
-                  </strong>
-                </li>
-                <li>
-                  Relevant Coursework: Data Structures and Algorithms, Web Development, Cloud Computing...
-                </li>
-              </ul>
-            </div>
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all bg-white/70">
-              <h3 className="text-xl font-bold mb-4 text-center text-[#2c4470]" >💼 Work Experience</h3>
-              <div className="space-y-4 text-gray-900 text-center">
-                <div>
-                  <h4 className="font-semibold">Pending Internship at ...</h4>
-                  <p>Currently applying to a lot of internships</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Pending Internship at ...</h4>
-                  <p>Currently applying to a lot of internships</p>
-                </div>
-              </div>
-            </div>
-            <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all md:col-span-2 bg-white/70">
-              <h3 className="text-xl font-bold mb-4 text-center text-[#2c4470]">🏋️‍♂️ Hobbies</h3>
-              <ul className="list-disc list-inside text-gray-900 space-y-2 text-center">
-                <li>Going to the gym</li>
-                <li>Playing weekend Basketball with friends</li>
-                <li>Going on random hikes and runs</li>
-                <li>Building interesting side projects</li>
-                <li>Watching anime during my free time</li>
-                <li>Trying new coffee and matcha places</li>
-              </ul>
-            </div>
-          </div>
         </motion.div>
       </RevealOnScroll>
+
+      {/* Education Section - full width */}
+      <section className="w-full bg-[#223A5E] py-16">
+        <h2 className="text-4xl font-serif font-bold text-center text-white mb-10">Education</h2>
+        <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto px-4">
+          {/* Card 1 */}
+          <div className="flex-1 bg-white/10 rounded-2xl shadow-lg flex flex-col items-center p-8">
+            <div className="bg-blue-100 rounded-full p-4 mb-4">
+              {/* Example: Compass Icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                <path d="M16 8l-4 8-4-4 8-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <div className="text-xl font-bold text-center text-white mb-2">University of Technology Sydney</div>
+            <div className="text-blue-100 text-center mb-4">Bachelor of Computing Science (Honours)</div>
+            <div className="w-full h-px bg-blue-200 my-2"></div>
+            <div className="text-blue-200 font-semibold text-sm mt-2">Internship</div>
+          </div>
+          {/* Card 2 */}
+          <div className="flex-1 bg-white/10 rounded-2xl shadow-lg flex flex-col items-center p-8">
+            <div className="bg-blue-100 rounded-full p-4 mb-4">
+              {/* Example: Museum Icon */}
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <rect x="6" y="10" width="12" height="8" rx="2" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <path d="M6 10V8a6 6 0 0112 0v2" stroke="currentColor" strokeWidth="2" fill="none"/>
+              </svg>
+            </div>
+            <div className="text-xl font-bold text-center text-white mb-2">The Inaro Museum of Contemporary Art</div>
+            <div className="text-blue-100 text-center mb-4">Diploma in Design</div>
+            <div className="w-full h-px bg-blue-200 my-2"></div>
+            <div className="text-blue-200 font-semibold text-sm mt-2">Internship</div>
+          </div>
+        </div>
+      </section>
     </section>
   );
 };

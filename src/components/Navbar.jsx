@@ -10,8 +10,11 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
             <div className="px-4">
                 <div className="flex justify-between items-center h-16">
                     <a href="#home" className="font-mono text-xl font-bold text-white">
-                        {" "}
-                        portfolio<span className="text-blue-500">.vu</span>{" "}
+                      <img
+                        src="/BV.png" 
+                        alt="Logo"
+                        className="h-18 w-18 object-contain"
+                      />
                     </a>
 
                     <div 
