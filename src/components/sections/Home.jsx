@@ -65,7 +65,24 @@ export const Home = () => {
         className="absolute top-[40%] left-[40%] w-[120px] h-[120px] bg-blue-400/40 rounded-full blur-2xl z-0"
       />
 
-      <div className="flex flex-col md:flex-row items-center w-full z-10 pl-50 md:pl-125">
+      {/* Absolute profile circle on the right with animation and fade on scroll */}
+      <motion.div
+        initial={{ scale: 0.7, opacity: 0, y: 80 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        style={{ opacity }} // <-- fade away on scroll
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        className="hidden md:block absolute top-1/2 right-[20%] -translate-y-1/2 z-30"
+      >
+      <div className="w-180 h-180 rounded-full bg-white/80 shadow-2xl border-5 border-blue-400 flex items-center justify-center overflow-hidden">
+        <img
+          src="/testingimg.jpg"
+          alt="Bao Vu"
+          className="w-full h-full object-cover rounded-full"
+        />
+      </div>
+      </motion.div>
+
+      <div className="flex flex-col md:flex-row items-center w-full z-10 pl-50 md:pl-185">
         {/* Hero Content */}
         <motion.div
           style={{ opacity }}
@@ -79,10 +96,11 @@ export const Home = () => {
               delay: 0.5,
               ease: [0.22, 1, 0.36, 1]
             }}
-            className="text-white font-extrabold text-5xl md:text-8xl text-center tracking-tight drop-shadow-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
+            className="text-white font-extrabold text-9xl md:text-10xl text-center tracking-tight drop-shadow-lg drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
           >
             BAO VU
           </motion.h1>
+          
           <div className="h-14 relative">
             <AnimatePresence mode="wait">
               <motion.p
@@ -91,9 +109,9 @@ export const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
-                className="text-white text-xl md:text-3xl text-center font-light absolute whitespace-nowrap overflow-hidden"
+                className="text-white text-4xl md:text-4xl text-center font-light absolute whitespace-pre"
               >
-                {words[index]}
+                {"\t\t"}{words[index]}
               </motion.p>
             </AnimatePresence>
           </div>
@@ -103,7 +121,7 @@ export const Home = () => {
               href="https://github.com/baovu-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 text-3xl transition-colors"
+              className="text-white hover:text-blue-400 text-4xl transition-colors"
             >
               <SiGithub />
             </a>
@@ -111,7 +129,7 @@ export const Home = () => {
               href="https://www.linkedin.com/in/baovudev/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 text-3xl transition-colors"
+              className="text-white hover:text-blue-400 text-4xl transition-colors"
             >
               <FaLinkedin />
             </a>
@@ -119,7 +137,7 @@ export const Home = () => {
               href="https://instagram.com/_baovu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 text-3xl transition-colors"
+              className="text-white hover:text-blue-400 text-4xl transition-colors"
             >
               <FaInstagram />
             </a>
@@ -127,7 +145,7 @@ export const Home = () => {
               href="https://facebook.com/_baovu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-blue-400 text-3xl transition-colors"
+              className="text-white hover:text-blue-400 text-4xl transition-colors"
             >
               <FaFacebook />
             </a>
@@ -145,13 +163,13 @@ export const Home = () => {
           >
             <a
               href="#projects"
-              className="bg-blue-600 text-white py-3 px-8 rounded font-semibold text-lg shadow-lg hover:bg-blue-700 transition"
+              className="bg-blue-600 text-white py-3 px-8 rounded font-semibold text-xl shadow-lg hover:bg-blue-700 transition"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="border border-blue-600 text-blue-500 py-3 px-8 rounded font-semibold text-lg hover:bg-blue-600 hover:text-white transition"
+              className="border border-blue-600 text-blue-500 py-3 px-8 rounded font-semibold text-xl hover:bg-blue-600 hover:text-white transition"
             >
               Contact Me
             </a>

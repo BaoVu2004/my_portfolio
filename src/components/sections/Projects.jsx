@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 export const Projects = () => {
   const projects = [
     {
-      title: "AI Chatbox???",
-      img: "/testingimg.jpg",
-      desc: "Work in Progress...",
-    },
-    {
-      title: "Untitles Project",
-      img: "/testingimg.jpg",
+      title: "AI Chatbox",
+      img: "/wip.png",
       desc: "Work in Progress...",
     },
     {
       title: "Untitled Project",
-      img: "/testingimg.jpg",
+      img: "/wip.png",
+      desc: "Work in Progress...",
+    },
+    {
+      title: "Untitled Project",
+      img: "/wip.png",
       desc: "Work in Progress...",
     },
   ];
@@ -28,7 +28,7 @@ export const Projects = () => {
 
   return (
     <>
-      <div className="w-full shadow-inner h-[1px] w-full bg-[#e5e7eb]" />
+      <div className="w-full shadow-inner h-[1px] w-full bg-[#f5f 8fc]" />
       <section id="projects" className="w-full min-h-screen  py-20 px-30 flex flex-col items-center">
         <div className="w-full">
         {/* Header */}
@@ -57,14 +57,14 @@ export const Projects = () => {
               className="flex items-center gap-4 justify-end"
             >
               <hr className="border-blue-500 w-27" />
-              <span className="text-4xl font-small text-blue-500">Recent</span>
+              <span className="text-4xl font-small text-[#3B5A8B]">Recent</span>
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
               transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
-              className="text-5xl font-extrabold text-blue-500 tracking-wider mt-2"
+              className="text-5xl font-extrabold text-[#3B5A8B] tracking-wider mt-2"
             >
               PROJECTS
             </motion.h1>

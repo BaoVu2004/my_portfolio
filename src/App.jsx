@@ -5,7 +5,7 @@ import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
-import { Education } from "./components/sections/Education";
+import { Background } from "./components/sections/Background";
 import { Projects } from "./components/sections/Projects";
 import { Contact } from "./components/sections/Contact";
 import "./index.css";
@@ -24,7 +24,7 @@ function App() {
           <Home />
           <Projects />
           <About />
-          <Education />
+          <Background />
           <Contact />
         </div>
       )}

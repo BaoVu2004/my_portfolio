@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Contact = () => {
   return (
-    <section id="contact" className="w-full bg-[#0f0f0f] py-24 px-4 flex flex-col items-center">
+    <section id="contact" className="w-full bg-[#f0f4fc] py-24 px-4 flex flex-col items-center">
       <div className="max-w-6xl w-full mx-auto">
         {/* Title */}
         <motion.div
@@ -13,8 +13,8 @@ export const Contact = () => {
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           className="mb-16 text-center"
         >
-          <h2 className="text-2xl md:text-3xl font-bold italic text-white tracking-widest mb-1">LET'S</h2>
-          <h1 className="text-3xl md:text-4xl font-extrabold italic text-white tracking-wider">CONNECT</h1>
+          <h2 className="text-2xl md:text-3xl font-bold italic text-[#2a3550] tracking-widest mb-1">LET'S</h2>
+          <h1 className="text-3xl md:text-4xl font-extrabold italic text-[#2a3550] tracking-wider">CONNECT</h1>
         </motion.div>
         {/* Contact Area */}
         <div className="flex flex-col md:flex-row justify-between items-stretch w-full gap-12">
@@ -26,7 +26,7 @@ export const Contact = () => {
             transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
             className="flex-1 flex flex-col justify-center items-start text-left"
           >
-            <h1 className="text-white font-extrabold uppercase leading-[1.1] text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: "IBM Plex Sans, sans-serif" }}>
+            <h1 className="text-[#2a3550] font-extrabold uppercase leading-[1.1] text-4xl md:text-5xl lg:text-6xl" style={{ fontFamily: "IBM Plex Sans, sans-serif" }}>
               LET'S START<br />
               <span className="ml-12 md:ml-16 block">OUR STORY</span><br />
               TOGETHER

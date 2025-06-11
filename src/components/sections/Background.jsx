@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 
-export const Education = () => {
+export const Background = () => {
   return (
     <motion.section
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
-      className="w-full bg-gradient-to-b from-[#6885b6] to-[#c9d9f4] py-16"
+      className="w-full bg-white py-16"
     >
-      <h2 className="text-4xl font-serif font-bold text-center text-white mb-10">Education</h2>
+      <h1 className="text-8xl font-extrabold text-left text-[#3B5A8B] mb-10 pl-10">My Background</h1>
       <div className="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-6xl mx-auto px-4">
         {/* Card 1 */}
         <div className="flex-1 bg-white/10 rounded-2xl shadow-lg flex flex-col items-center p-8">
@@ -20,10 +20,10 @@ export const Education = () => {
               <path d="M16 8l-4 8-4-4 8-4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" fill="none"/>
             </svg>
           </div>
-          <div className="text-xl font-bold text-center text-white mb-2">University of Technology Sydney</div>
-          <div className="text-blue-100 text-center mb-4">Bachelor of Computing Science (Honours)</div>
+          <div className="text-xl font-bold text-center text-[#374151] mb-2">University of Technology Sydney</div>
+          <div className="text-[#374151] text-center mb-4">Bachelor of Computing Science (Honours)</div>
           <div className="w-full h-px bg-blue-200 my-2"></div>
-          <div className="text-blue-200 font-semibold text-sm mt-2">WAM: 90 GPA: 6.75</div>
+          <div className="text-[#374151] font-semibold text-sm mt-2">WAM: 90 GPA: 6.75</div>
         </div>
         {/* Card 2 */}
         <div className="flex-1 bg-white/10 rounded-2xl shadow-lg flex flex-col items-center p-8">
@@ -34,10 +34,10 @@ export const Education = () => {
               <path d="M6 10V8a6 6 0 0112 0v2" stroke="currentColor" strokeWidth="2" fill="none"/>
             </svg>
           </div>
-          <div className="text-xl font-bold text-center text-white mb-2">Fairvale High School</div>
-          <div className="text-blue-100 text-center mb-4">HSC Graduate</div>
+          <div className="text-xl font-bold text-center text-[#374151] mb-2">Fairvale High School</div>
+          <div className="text-[#374151] text-center mb-4">HSC Graduate</div>
           <div className="w-full h-px bg-blue-200 my-2"></div>
-          <div className="text-blue-200 font-semibold text-sm mt-2">Listed among "2021 HSC Distinguished Achievers"</div>
+          <div className="text-[#374151] font-semibold text-sm mt-2">Listed among "2021 HSC Distinguished Achievers"</div>
         </div>
       </div>
     </motion.section>
