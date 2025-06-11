@@ -29,7 +29,7 @@ export const Projects = () => {
   return (
     <>
       <div className="w-full shadow-inner h-[1px] w-full bg-[#e5e7eb]" />
-      <section id="projects" className="w-full min-h-screen bg-[#f3f4f6] py-20 px-4 flex flex-col items-center">
+      <section id="projects" className="w-full min-h-screen  py-20 px-30 flex flex-col items-center">
         <div className="w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-12 w-full">

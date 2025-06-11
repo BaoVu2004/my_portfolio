@@ -20,6 +20,11 @@ export const Home = () => {
   });
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  // Animated background blobs
+  // You can add more or change colors as you like!
+  // No need for scrollY here, just looping animation
+  // If you want parallax for an image, use useScroll/useTransform as in previous answers
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIndex((prev) => (prev + 1) % words.length);
@@ -33,6 +38,33 @@ export const Home = () => {
       ref={sectionRef}
       className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-[#6885b6] to-[#c9d9f4] text-gray-100"
     >
+      {/* Animated background blobs */}
+      <motion.div
+        animate={{ y: [0, -60, 0] }}
+        transition={{ duration: 9, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
+        className="absolute top-[80px] right-[80px] w-[220px] h-[220px] bg-blue-400/40 rounded-full blur-3xl z-0"
+      />
+      <motion.div
+        animate={{ y: [0, 60, 0], x: [0, 40, 0] }}
+        transition={{ duration: 12, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
+        className="absolute bottom-[100px] right-[-60px] w-[180px] h-[180px] bg-blue-400/40 rounded-full blur-2xl z-0"
+      />
+      <motion.div
+        animate={{ y: [0, -40, 0] }}
+        transition={{ duration: 10, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
+        className="absolute top-[20%] left-[200px] w-[200px] h-[200px] bg-blue-400/40 rounded-full blur-2xl z-0"
+      />
+      <motion.div
+        animate={{ y: [0, 50, 0], x: [0, -30, 0] }}
+        transition={{ duration: 14, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
+        className="absolute bottom-[10%] left-[600px] w-[160px] h-[160px] bg-blue-400/40 rounded-full blur-2xl z-0"
+      />
+      <motion.div
+        animate={{ y: [0, -30, 0], x: [0, 30, 0] }}
+        transition={{ duration: 11, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" }}
+        className="absolute top-[40%] left-[40%] w-[120px] h-[120px] bg-blue-400/40 rounded-full blur-2xl z-0"
+      />
+
       <div className="flex flex-col md:flex-row items-center w-full z-10 pl-50 md:pl-125">
         {/* Hero Content */}
         <motion.div
@@ -76,7 +108,7 @@ export const Home = () => {
               <SiGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/baovutech/"
+              href="https://www.linkedin.com/in/baovudev/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 text-3xl transition-colors"
@@ -126,9 +158,8 @@ export const Home = () => {
           </motion.div>
           <span className="absolute bottom-8 left-8 font-bold text-md md:text-xl text-white font-mono tracking-wide z-20">
             Based in Sydney, Australia
-          </span> 
+          </span>
         </motion.div>
-
       </div>
 
       <motion.a
